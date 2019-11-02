@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="common.css"/>
     <title>index page</title>
 </head>
 <body>
-    Hello, I'm Kate
+<div th:insert="~{common :: #header__common}" class="header__common"></div>
+Hello, I'm Kate
+Current date and time:
+[[${dateTime}]]
+<div th:insert="~{common :: #footer__common}" class="footer__common"></div>
 </body>
 </html>

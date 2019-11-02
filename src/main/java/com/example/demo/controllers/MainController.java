@@ -1,7 +1,10 @@
 package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Date;
 
 @Controller
 public class MainController {
@@ -18,7 +21,12 @@ public class MainController {
         return "signup";
     }
     @GetMapping("/user")
-    public String getUser(){
+    public String getUser() {
         return "user";
+    }
+    @GetMapping(value = {"/", "/index"})
+    public String getIndex(Model model) {
+        model.addAttribute("dateTime", new Date());
+        return "index";
     }
 }

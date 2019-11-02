@@ -1,0 +1,8 @@
+.header__common {
+    background-color: lightgreen;
+    font: bold;
+}
+.footer__common {
+    background-color: lightblue;
+    font: italic;
+}
