@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>user page</title>
+
 </head>
 <body>
-    user page
-    <br/>
-    login:
-    <br/>
-    parole:
+<div th:insert="~{common :: common__head}"></div>
+<div th:insert="~{header :: header__body}"></div>
+
+user page
+<br/>
+login:
+<br/>
+parole:
+<div th:insert="~{footer :: footer__common}"></div>
 </body>
 </html>

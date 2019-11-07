@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>signup page</title>
 </head>
 <body>
+<div th:insert="~{common :: common__head}"></div>
+<div th:insert="~{header :: header__body}"></div>
     Signup
     <form>
         <label>
@@ -29,5 +31,6 @@
         <br/>
         <input type="submit" value="sign in"/>
     </form>
+<div th:insert="~{footer :: footer__body}"></div>
 </body>
 </html>

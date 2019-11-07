@@ -6,10 +6,11 @@
     <title>index page</title>
 </head>
 <body>
-<div th:insert="~{common :: #header__common}" class="header__common"></div>
+<div th:insert="~{common :: common__head}"></div>
+<div th:insert="~{header :: header__body}"></div>
 Hello, I'm Kate
 Current date and time:
 [[${dateTime}]]
-<div th:insert="~{common :: #footer__common}" class="footer__common"></div>
+<div th:insert="~{footer :: footer__body}"></div>
 </body>
 </html>
