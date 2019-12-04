@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>signin page</title>
+    <style>
+        body{
+            background: url("https://i.pinimg.com/originals/2d/0f/79/2d0f796f4655baeca812ed1b7af9abf7.jpg");
+        }
+        header {
+            font-family: "Times New Roman", Georgia, Serif;
+            font-style: oblique;
+        }
+        button{
+            background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+            background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+            padding: 3px 7px;
+            color: #333;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #666;
+        }
+        .brd {
+            border: 1px double black; /* Параметры границы */
+            background: #ffffff; /* Цвет фона */
+            padding: 10px; /* Поля вокруг текста */
+            margin: 0px 200px 0px 200px;
+        }
+    </style>
 </head>
 <body>
 <div th:insert="~{common :: common__head}"></div>
 <div th:insert="~{header :: header__body}"></div>
-    Signin
-    <form>
-        <label>
-            login
-        </label>
-        <input type="text"/>
-        <br/>
-        <label>
-            password
-        </label>
-        <input type="text"/>
-        <br/>
-        <input type="submit" value="sign in"/>
-    </form>
+<br>
+    <form th:align="center" th:class="brd">
+        <header><p><h3 align="center"><b>Sign in</b></h3></p></header>
+        <p><input type="text" maxlength="25" size="40" autofocus required placeholder="Login"/></p>
+        <p><input  type="password" maxlength="25" size="40" required placeholder="Password"/></p>
+        <input type="checkbox" name="a" value="Save password on this computer?"> Save password on this computer?
+        <p><button>Forgot password</button>
+            <button>
+               Sign in
+            </button></p>
+</form>
 <div th:insert="~{footer :: footer__body}"></div>
 </body>
 </html>

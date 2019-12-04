@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="common.css"/>
     <title>index page</title>
+    <style>
+        body{
+            background: url("https://i.pinimg.com/originals/2d/0f/79/2d0f796f4655baeca812ed1b7af9abf7.jpg");
+        }
+    </style>
 </head>
 <body>
 <div th:insert="~{common :: common__head}"></div>
 <div th:insert="~{header :: header__body}"></div>
+<br>
+<p><input type="search" name="q" placeholder="Поиск по сайту">
+    <input type="submit" value="Найти"></p>
 Hello, I'm Kate
 Current date and time:
 [[${dateTime}]]
